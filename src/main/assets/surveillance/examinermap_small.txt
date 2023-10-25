@@ -1,0 +1,13 @@
+height = 50 // height of map in cells (discrete space) or in units of distance (continuous space)
+width = 50 // width of map in cells (discrete space) or in units of distance (continuous space)
+numGuards = 1 // will be your exploration agents
+numIntruders = 1 // will be your intruder agents
+baseSpeedGuard = 1 // speed of exploration agents when walking
+baseSpeedIntruder = 2
+distanceViewing = 5 // how many cells/units of distance an agent can see features in front of them (except walls or other obstacles are in their way).
+numberMarkers = 5 //number of markers available per marker type (if they are visual markers, they can be seen in the viewing area if not hidden by obstacles).
+smellingDistance = 1 // distance from which you can smell the markers (if they are phereomones) -> from all directions. If you have visual markers only, you can ignore this parameter. It is up to you to decide which markers are visual ones and which are pheremone-like
+spawnAreaGuards = 2 2 8 9 // Area where guards spawn -> big enough to contain number guards
+spawnAreaIntruders = 2 2 14 12
+wall = 0 0 1 5 //Area that an agent cannot cross and look through
+teleport = 5 5 6 7 9 8 0.0  //First 4 coordinates define the area of teleport, next 2 coordinates the spawning target coordinates and the last number defines the turning direction at the target area

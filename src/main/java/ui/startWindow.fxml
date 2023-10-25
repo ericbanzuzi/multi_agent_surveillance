@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="800.0" style="-fx-background-color: black; -fx-background-size: cover;" styleClass="anchor"
+            xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ui.MenuControllerWindow">
+    <children>
+        <VBox prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane prefHeight="600.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Text id="title-text" text="Multi-Agent Surveillance" fill="white" styleClass="text1"
+                              style="-fx-font-size: 40px;"
+                              layoutX="200"
+                              layoutY="160.0"
+                              VBox.vgrow="ALWAYS"/>
+
+                        <Button text="Exploration" prefHeight="50" prefWidth="300" maxHeight="Infinity" maxWidth="Infinity"
+                                style="-fx-font-family: 'Copperplate', fantasy; -fx-font-size: 20px;"
+                                layoutX="250" layoutY="240" VBox.vgrow="ALWAYS" onMouseClicked="#button1Handle"  styleClass="button1">
+                            <tooltip>
+                                <Tooltip text="See guards exploring a map" showDelay="250ms"/>
+                            </tooltip>
+                        </Button>
+
+                        <Button text="Guards vs Intruders" style="-fx-font-family: 'Copperplate', fantasy; -fx-font-size: 20px;"
+                                prefHeight="50" prefWidth="300" maxHeight="Infinity" maxWidth="Infinity"
+                                layoutX="250" layoutY="300" VBox.vgrow="ALWAYS" onMouseClicked="#button2Handle" styleClass="button2">
+                            <tooltip>
+                                <Tooltip text="See guards trying to stop intruders" showDelay="250ms"/>
+                            </tooltip>
+                        </Button>
+
+                        <Text id="welcome-text" text="Group 17" fill="aquamarine" styleClass="text1"
+                              style="-fx-font-size: 20px;"
+                              layoutX="360"
+                              layoutY="560.0"
+                              VBox.vgrow="ALWAYS"/>
+
+                        <fx:define>
+                        <ToggleGroup fx:id="xxx" />
+                        </fx:define>
+                        <RadioButton text="Map 1" style="-fx-font-family: 'Copperplate', fantasy; -fx-font-size: 20px; -fx-text-fill: white;"
+                                     layoutX="330" layoutY="380" selected="true" VBox.vgrow="ALWAYS" toggleGroup="$xxx" fx:id="f1" />
+                        <RadioButton text="Map 2" style="-fx-font-family: 'Copperplate', fantasy; -fx-font-size: 20px; -fx-text-fill: white;"
+                                     layoutX="330" layoutY="420" VBox.vgrow="ALWAYS" toggleGroup="$xxx" fx:id="f2"/>
+                        <RadioButton text="Map 3" style="-fx-font-family: 'Copperplate', fantasy; -fx-font-size: 20px; -fx-text-fill: white;"
+                                     layoutX="330" layoutY="460" VBox.vgrow="ALWAYS" toggleGroup="$xxx" fx:id="f3"/>
+
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+        <HBox prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="550.0" AnchorPane.leftAnchor="700.0"
+                AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="500.0">
+        </HBox>
+    </children>
+</AnchorPane>
